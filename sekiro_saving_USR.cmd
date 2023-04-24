@@ -1,6 +1,8 @@
 @echo off 
 title sekiro saving
 
+set account=73168923476358621
+
 :op
 set /p op="Enter operation or 'h' for help:"
 
@@ -24,7 +26,7 @@ goto op
     )
     echo save, %name%!
     md save_data_USR\%name%
-    xcopy %CD%\76561199205081181 %CD%\save_data_USR\%name% /Y
+    xcopy %CD%\%account% %CD%\save_data_USR\%name% /Y
     exit
 
 
@@ -36,7 +38,7 @@ goto op
     )
     if exist save_data_USR\%name% (
         echo load, %name%!
-        xcopy %CD%\save_data_USR\%name% %CD%\76561199205081181 /Y
+        xcopy %CD%\save_data_USR\%name% %CD%\%account% /Y
         exit
     )
     echo file not exist
