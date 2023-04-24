@@ -1,7 +1,8 @@
 @echo off 
 title sekiro saving
 
-set account=76561199205081181
+:you need to modify this string of number into your own account number
+set account=73168923476358621
 
 :op
 set /p op="Enter operation or 'h' for help:"
